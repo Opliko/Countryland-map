@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>mapa fin</title>
+    <title>map fin 2</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
     <link rel="stylesheet" href="http://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
@@ -25,6 +25,7 @@
         layer = L.tileLayer('{z}/{x}/{y}.png', {
           minZoom: mapMinZoom, maxZoom: mapMaxZoom,
           bounds: mapBounds,
+          attribution: 'Rendered with <a href="http://www.maptiler.com/">MapTiler</a>',
           noWrap: true,
           tms: false
         }).addTo(map);

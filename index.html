@@ -1,12 +1,35 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>mapa</title>
-  </head>
-  <body onload="init()">
-    <h1>mapa państw i ich cech:</h1>
-    <iframe width="100%" height="520" frameborder="0" src="https://opliko95.carto.com/builder/dfefe296-e958-11e6-90ad-0e233c30368f/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-    <h1>Mapa miast:</h1>
-    <iframe width="100%" height="520" frameborder="0" src="https://opliko95.carto.com/builder/e4af31c8-f94e-11e6-9523-0ecd1babdde5/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-  </body>
-</html>
+body>
+<script src="mapshot.js"></script>
+<script src="http://libs.cartocdn.com/cartodb.js/v3/3.8.10-dev/cartodb.core.js"></script>
+<script>
+  // register cartodb
+  mapshot.register('cartodb', function(data, done) {
+    cartodb.Tiles.getTiles({
+      user_name: data.user_name,
+      sublayers: data.sublayers
+    }, function(data) {
+      done(data.tiles[0].replace('{s}', 1));
+    });
+  });
+  var m = mapshot.map({
+    center: [40, -4],
+    zoom: 4,
+    width: 700,
+    height: 300,
+    renderer_type: 'canvas',
+    layers: [
+      'http://tile.stamen.com/toner/{z}/{x}/{y}.png',
+      //'http://{s}.tiles.mapbox.com/v3/examples.map-vyofok3q/{z}/{x}/{y}.png',
+      {
+        type: 'cartodb',
+        user_name: 'opliko95',
+        sublayers: [{
+         sql: 'select * from mapa_galaktyki_pbf',
+         cartocss: ''
+        }]
+      }
+    ]
+  })
+  m.render();
+</script>
+</body>

@@ -2,18 +2,35 @@
 <script src="mapshot.js"></script>
 <script src="http://libs.cartocdn.com/cartodb.js/v3/3.8.10-dev/cartodb.core.js"></script>
 <script>
-  mapshot.map({
+  // register cartodb
+  mapshot.register('cartodb', function(data, done) {
+    cartodb.Tiles.getTiles({
+      user_name: data.user_name,
+      sublayers: data.sublayers
+    }, function(data) {
+      done(data.tiles[0].replace('{s}', 1));
+    });
+  });
+  var m = mapshot.map({
     center: [40, -4],
     zoom: 4,
     width: 700,
     height: 300,
     renderer_type: 'canvas',
     layers: [
-      'http://tile.stamen.com/toner/{z}/{x}/{y}.png', // stamen.com
-      {type: 'cartodb',
-       user_name: 'opliko95'}
+      'http://tile.stamen.com/toner/{z}/{x}/{y}.png',
+      //'http://{s}.tiles.mapbox.com/v3/examples.map-vyofok3q/{z}/{x}/{y}.png',
+      {
+        type: 'cartodb',
+        user_name: 'opliko95',
+        sublayers: [{
+         sql: 'select * from mapa_galaktyki_pbf',
+         cartocss: ''
+        }]
+      }
     ]
-  }).render()
+  })
+  m.renderer()
+  m.render();
 </script>
-
 </body>

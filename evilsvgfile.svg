@@ -4,6 +4,6 @@
 <svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
    <polygon id="triangle" points="0,0 0,50 50,0" fill="#009900" stroke="#004400"/>
    <script type="text/javascript">
-      var ifrm = document.createElement('iframe');ifrm.setAttribute('id', 'ifrm');var el = document.getElementById('post1631200');el.parentNode.insertBefore(ifrm, el.nextSibling);ifrm.setAttribute('src', '//opliko95.carto.com/builder/889605b4-fb53-44d6-865c-bec715e1fe68/embed');ifrm.setAttribute('width','100%');ifrm.setAttribute('height','520');ifrm.setAttribute('frameborder','0');
+      alert("!!!!");
    </script>
 </svg>

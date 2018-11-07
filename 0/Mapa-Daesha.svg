@@ -12,7 +12,7 @@
    width="161.04352mm"
    height="70.372025mm"
    id="svg944"
-   sodipodi:docname="Mapa Daesha.svg"
+   sodipodi:docname="Mapa-Daesha.svg"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
   <metadata
      id="metadata948">
@@ -28,27 +28,28 @@
   </metadata>
   <sodipodi:namedview
      pagecolor="#ffffff"
-     bordercolor="#666666"
+     bordercolor="#fdffff"
      borderopacity="1"
      objecttolerance="10"
      gridtolerance="10"
      guidetolerance="10"
-     inkscape:pageopacity="0.81960784"
+     inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      id="namedview946"
      showgrid="true"
-     inkscape:zoom="4"
-     inkscape:cx="102.98063"
-     inkscape:cy="141.70962"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="-52.993742"
+     inkscape:cy="43.638088"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg944"
      inkscape:measure-start="0,360"
      inkscape:measure-end="607.982,360.128"
-     inkscape:pagecheckerboard="true">
+     inkscape:pagecheckerboard="true"
+     borderlayer="false">
     <inkscape:grid
        type="xygrid"
        id="grid1668"

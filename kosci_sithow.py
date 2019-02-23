@@ -9,14 +9,15 @@ import time
 cookie={}
 urls = ["https://grupy.jeja.pl/topic,numer_tematu,rzuty-koscmi,nowe.html"] 
 #zastąp "numer_tematu"... numerem tematu. Możesz też zmienić nazwę (tu "rzuty-koscmi", swoją zobacz w url)
-
+bot_login = "login" #zastąp loginem
+bot_password = "password" #zastąp hasłem
 def login():
     global cookie
     browser = RoboBrowser(user_agent="bot autorstwa opliko95", parser="html.parser")
     browser.open("https://www.jeja.pl/logowanie.html")
     login_form = browser.get_form(class_="standard-form log-form")
-    login_form["login"].value = "login" #zastąp loginem
-    login_form["passw0rd"].value = "hasło" #zastąp hasłem
+    login_form["login"].value = bot_login
+    login_form["passw0rd"].value = bot_password
     login_form["remember"].value = "1"
     browser.submit_form(login_form)
     cookie = {"Remember":browser.session.cookies["Remember"]}
@@ -40,7 +41,7 @@ def bot():
             nr = 1
             nick = nick.find("a", href=True).contents[0]
             print(nick)
-            while "kosci_sithow" not in nick:
+            while bot_login not in nick:
                 no_post=0
                 try:
                     postid = str(z[-1*nr].get("id")[4:])

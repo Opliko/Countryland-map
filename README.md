@@ -17,5 +17,5 @@ Bot pozwalający na rzucanie kośćmi w grupach na jeja.pl
   1. napisz jakiś post w tym temacie. Nie jest ważne co w nim jest - możesz umieścić link do tematu, informację za co rzucasz itp.
   2. w miejscu gdzie chcesz mieć rzut wstaw [dice]xky[/dice] - gdzie x zastępujesz liczbą kości, a y liczbą "oczek" w jednej kości. np. [dice]1k6[/dice] rzuci 1 kością o 6 ścianach.
   Kości k4, k6, k8, k10, k12 i k20 mają swoją reprezentację graficzną. Inne wartości są po prostu tekstem
-  3. czekaj aż bot się uaktywni - usunie twój post i wstawi swój z zamienionymi tagami [dice] na wyniki rzutów. Bot sprawdza stronę raz na 2 minuty i dodatkowo nie działa od 4 do 6 rano (by ograniczyć liczbę zapytań gdy te nie są potrzebne; możliwe zmiany)
+  3. czekaj aż bot się uaktywni - usunie twój post i wstawi swój z zamienionymi tagami [dice] na wyniki rzutów. Bot sprawdza stronę raz na 2 minuty.
   4. Ciesz się ładnym rzutem :)

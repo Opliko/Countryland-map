@@ -1,37 +1,3 @@
 <body>
-  Test
-<script src="mapshot.js"></script>
-<script src="http://libs.cartocdn.com/cartodb.js/v3/3.8.10-dev/cartodb.core.js"></script>
-<script>
-  // register cartodb
-  mapshot.register('cartodb', function(data, done) {
-    cartodb.Tiles.getTiles({
-      user_name: data.user_name,
-      sublayers: data.sublayers
-    }, function(data) {
-      done(data.tiles[0].replace('{s}', 1));
-    });
-  });
-  var m = mapshot.map({
-    center: [40, -4],
-    zoom: 4,
-    width: 700,
-    height: 300,
-    renderer_type: 'canvas',
-    layers: [
-      'http://tile.stamen.com/toner/{z}/{x}/{y}.png',
-      //'http://{s}.tiles.mapbox.com/v3/examples.map-vyofok3q/{z}/{x}/{y}.png',
-      {
-        type: 'cartodb',
-        user_name: 'examples',
-        sublayers: [{
-         sql: '',
-         cartocss: ''
-        }]
-      }
-    ]
-  })
-  m.render();
-</script>
-  <canvas  width="700" height="300"></canvas>
+<p style="text-align:center">Ta strona służy tylko jako źródło obrazków do kości, nie ma tu nic ciekawego.</p>
 </body>

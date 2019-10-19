@@ -7,7 +7,7 @@ Bot pozwalający na rzucanie kośćmi w grupach na jeja.pl
 + zainstaluj wymagane biblioteki przechodząc do folderu `kosci_sithow` i uruchamiając polecenie
 ```pip install -r requirements.txt```
 + dostosuj listę url w `kosci_sithow.py` (10 linijka, wzór pierwszego url już jest i wymaga tylko zmiany numeru i nazwy tematu)
-+ dostosuj konto bota - nie daję stąd (oczywiście) dostępu do kąta kosci_sithow, więc musisz mieć do tego własne konto. Wstaw dane logowania w określone miejsce (12 i 13 linijka w `kosci_sithow.py`)
++ dostosuj konto bota - nie daję stąd (oczywiście) dostępu do konta kosci_sithow, więc musisz mieć do tego własne konto. Wstaw dane logowania w określone miejsce (12 i 13 linijka w `kosci_sithow.py`)
 
 # Użytkowanie
 ### uruchamianie skryptu:
